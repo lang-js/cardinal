@@ -1,0 +1,10 @@
+{
+  "name": "lang-js-cardinal",
+  "version": "1.0.0",
+  "description": "cardinal rules for various languages",
+  "repo": "lang-js/cardinal",
+  "main": "index.js",
+  "author": "Cameron Bytheway <bytheway.cameron@gmail.com>",
+  "scripts": ["index.js"],
+  "license": "MIT"
+}

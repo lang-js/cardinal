@@ -1,0 +1,25 @@
+{
+  "name": "lang-js-cardinal",
+  "version": "0.1.0",
+  "description": "cardinal rules for various languages",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lang-js/cardinal.git"
+  },
+  "author": "Cameron Bytheway <bytheway.cameron@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lang-js/cardinal/issues"
+  },
+  "homepage": "https://github.com/lang-js/cardinal",
+  "devDependencies": {
+    "cldr": "^2.3.2",
+    "mocha": "^2.0.1",
+    "should": "^4.1.0",
+    "xpath": "0.0.7"
+  }
+}
