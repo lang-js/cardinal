@@ -5,46 +5,6 @@ function augment(fn, list) {
   fn.formats = list;
 }
 
-augment(e.aa =
- e.agq =
- e.bas =
- e.byn =
- e.dav =
- e.dje =
- e.dua =
- e.dyo =
- e.ebu =
- e.ewo =
- e.guz =
- e.ia =
- e.kam =
- e.khq =
- e.ki =
- e.kln =
- e.kok =
- e.ksf =
- e.lu =
- e.luo =
- e.luy =
- e.mer =
- e.mfe =
- e.mgh =
- e.mua =
- e.nmg =
- e.nus =
- e.rn =
- e.rw =
- e.sbp =
- e.swc =
- e.tg =
- e.twq =
- e.vai =
- e.wal =
- e.yav =
- e.zgh = function aa(n) {
-
-}, ["other"]);
-
 augment(e.af =
  e.asa =
  e.az =
