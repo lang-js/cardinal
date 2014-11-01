@@ -1,6 +1,6 @@
 {
   "name": "lang-js-cardinal",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "cardinal rules for various languages",
   "main": "index.js",
   "scripts": {
