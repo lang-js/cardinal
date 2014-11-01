@@ -1,6 +1,11 @@
 var e = exports;
 
-(e.aa =
+function augment(fn, list) {
+  fn.count = list.length;
+  fn.formats = list;
+}
+
+augment(e.aa =
  e.agq =
  e.bas =
  e.byn =
@@ -38,9 +43,9 @@ var e = exports;
  e.yav =
  e.zgh = function aa(n) {
 
-}).count = 1;
+}, ["other"]);
 
-(e.af =
+augment(e.af =
  e.asa =
  e.az =
  e.bem =
@@ -112,18 +117,18 @@ var e = exports;
  e.xh =
  e.xog = function af(n) {
 if(typeof n==="string")n=parseInt(n,10);if(n===1)return"one";return"other"
-}).count = 2;
+}, ["one","other"]);
 
-(e.ak =
+augment(e.ak =
  e.ln =
  e.mg =
  e.nso =
  e.pa =
  e.ti = function ak(n) {
 if(typeof n==="string")n=parseInt(n,10);if(n===Math.floor(n)&&n>=0&&n<=1)return"one";return"other"
-}).count = 2;
+}, ["one","other"]);
 
-(e.am =
+augment(e.am =
  e.bn =
  e.fa =
  e.gu =
@@ -132,13 +137,13 @@ if(typeof n==="string")n=parseInt(n,10);if(n===Math.floor(n)&&n>=0&&n<=1)return"
  e.mr =
  e.zu = function am(n) {
 var i=Math.floor(Math.abs(n));if(typeof n==="string")n=parseInt(n,10);if(i===0||n===1)return"one";return"other"
-}).count = 2;
+}, ["one","other"]);
 
-(e.ar = function ar(n) {
+augment(e.ar = function ar(n) {
 if(typeof n==="string")n=parseInt(n,10);if(n===0)return"zero";if(n===1)return"one";if(n===2)return"two";if(n%100===Math.floor(n%100)&&n%100>=3&&n%100<=10)return"few";if(n%100===Math.floor(n%100)&&n%100>=11&&n%100<=99)return"many";return"other"
-}).count = 6;
+}, ["zero","one","two","few","many","other"]);
 
-(e.as =
+augment(e.as =
  e.ast =
  e.ca =
  e.de =
@@ -153,13 +158,13 @@ if(typeof n==="string")n=parseInt(n,10);if(n===0)return"zero";if(n===1)return"on
  e.sw =
  e.ur = function as(n) {
 var i=Math.floor(Math.abs(n)),v=n.toString().replace(/^[^.]*\.?/,"").length;if(typeof n==="string")n=parseInt(n,10);if(i===1&&v===0)return"one";return"other"
-}).count = 2;
+}, ["one","other"]);
 
-(e.be = function be(n) {
+augment(e.be = function be(n) {
 if(typeof n==="string")n=parseInt(n,10);if(n%10===1&&!(n%100===11))return"one";if(n%10===Math.floor(n%10)&&n%10>=2&&n%10<=4&&!(n%100>=12&&n%100<=14))return"few";if(n%10===0||n%10===Math.floor(n%10)&&n%10>=5&&n%10<=9||n%100===Math.floor(n%100)&&n%100>=11&&n%100<=14)return"many";return"other"
-}).count = 4;
+}, ["one","few","many","other"]);
 
-(e.bm =
+augment(e.bm =
  e.bo =
  e.dz =
  e.id =
@@ -184,121 +189,121 @@ if(typeof n==="string")n=parseInt(n,10);if(n%10===1&&!(n%100===11))return"one";i
  e.yo =
  e.zh = function bm(n) {
 return"other"
-}).count = 1;
+}, ["other"]);
 
-(e.br = function br(n) {
+augment(e.br = function br(n) {
 if(typeof n==="string")n=parseInt(n,10);if(n%10===1&&!(n%100===11||n%100===71||n%100===91))return"one";if(n%10===2&&!(n%100===12||n%100===72||n%100===92))return"two";if(n%10===Math.floor(n%10)&&(n%10>=3&&n%10<=4||n%10===9)&&!(n%100>=10&&n%100<=19||n%100>=70&&n%100<=79||n%100>=90&&n%100<=99))return"few";if(!(n===0)&&n%1e6===0)return"many";return"other"
-}).count = 5;
+}, ["one","two","few","many","other"]);
 
-(e.bs =
+augment(e.bs =
  e.hr =
  e.sr = function bs(n) {
 var i=Math.floor(Math.abs(n)),v=n.toString().replace(/^[^.]*\.?/,"").length,f=parseInt(n.toString().replace(/^[^.]*\.?/,""),10);if(typeof n==="string")n=parseInt(n,10);if(v===0&&i%10===1&&(!(i%100===11)||f%10===1&&!(f%100===11)))return"one";if(v===0&&i%10===Math.floor(i%10)&&i%10>=2&&i%10<=4&&(!(i%100>=12&&i%100<=14)||f%10===Math.floor(f%10)&&f%10>=2&&f%10<=4&&!(f%100>=12&&f%100<=14)))return"few";return"other"
-}).count = 3;
+}, ["one","few","other"]);
 
-(e.cs =
+augment(e.cs =
  e.sk = function cs(n) {
 var i=Math.floor(Math.abs(n)),v=n.toString().replace(/^[^.]*\.?/,"").length;if(typeof n==="string")n=parseInt(n,10);if(i===1&&v===0)return"one";if(i===Math.floor(i)&&i>=2&&i<=4&&v===0)return"few";if(!(v===0))return"many";return"other"
-}).count = 4;
+}, ["one","few","many","other"]);
 
-(e.cy = function cy(n) {
+augment(e.cy = function cy(n) {
 if(typeof n==="string")n=parseInt(n,10);if(n===0)return"zero";if(n===1)return"one";if(n===2)return"two";if(n===3)return"few";if(n===6)return"many";return"other"
-}).count = 6;
+}, ["zero","one","two","few","many","other"]);
 
-(e.da = function da(n) {
+augment(e.da = function da(n) {
 var i=Math.floor(Math.abs(n)),t=parseInt(n.toString().replace(/^[^.]*\.?|0+$/g,""),10);if(typeof n==="string")n=parseInt(n,10);if(n===1||!(t===0)&&(i===0||i===1))return"one";return"other"
-}).count = 2;
+}, ["one","other"]);
 
-(e.ff =
+augment(e.ff =
  e.fr =
  e.hy =
  e.kab = function ff(n) {
 var i=Math.floor(Math.abs(n));if(typeof n==="string")n=parseInt(n,10);if(i===0||i===1)return"one";return"other"
-}).count = 2;
+}, ["one","other"]);
 
-(e.fil = function fil(n) {
+augment(e.fil = function fil(n) {
 var i=Math.floor(Math.abs(n)),v=n.toString().replace(/^[^.]*\.?/,"").length,f=parseInt(n.toString().replace(/^[^.]*\.?/,""),10);if(typeof n==="string")n=parseInt(n,10);if(v===0&&(i===1||i===2||i===3||v===0&&(!(i%10===4||i%10===6||i%10===9)||!(v===0)&&!(f%10===4||f%10===6||f%10===9))))return"one";return"other"
-}).count = 2;
+}, ["one","other"]);
 
-(e.ga = function ga(n) {
+augment(e.ga = function ga(n) {
 if(typeof n==="string")n=parseInt(n,10);if(n===1)return"one";if(n===2)return"two";if(n===Math.floor(n)&&n>=3&&n<=6)return"few";if(n===Math.floor(n)&&n>=7&&n<=10)return"many";return"other"
-}).count = 5;
+}, ["one","two","few","many","other"]);
 
-(e.gd = function gd(n) {
+augment(e.gd = function gd(n) {
 if(typeof n==="string")n=parseInt(n,10);if(n===1||n===11)return"one";if(n===2||n===12)return"two";if(n===Math.floor(n)&&(n>=3&&n<=10||n>=13&&n<=19))return"few";return"other"
-}).count = 4;
+}, ["one","two","few","other"]);
 
-(e.gv = function gv(n) {
+augment(e.gv = function gv(n) {
 var i=Math.floor(Math.abs(n)),v=n.toString().replace(/^[^.]*\.?/,"").length;if(typeof n==="string")n=parseInt(n,10);if(v===0&&i%10===1)return"one";if(v===0&&i%10===2)return"two";if(v===0&&(i%100===0||i%100===20||i%100===40||i%100===60||i%100===80))return"few";if(!(v===0))return"many";return"other"
-}).count = 5;
+}, ["one","two","few","many","other"]);
 
-(e.he = function he(n) {
+augment(e.he = function he(n) {
 var i=Math.floor(Math.abs(n)),v=n.toString().replace(/^[^.]*\.?/,"").length;if(typeof n==="string")n=parseInt(n,10);if(i===1&&v===0)return"one";if(i===2&&v===0)return"two";if(v===0&&!(n>=0&&n<=10)&&n%10===0)return"many";return"other"
-}).count = 4;
+}, ["one","two","many","other"]);
 
-(e.is = function is(n) {
+augment(e.is = function is(n) {
 var i=Math.floor(Math.abs(n)),t=parseInt(n.toString().replace(/^[^.]*\.?|0+$/g,""),10);if(typeof n==="string")n=parseInt(n,10);if(t===0&&i%10===1&&(!(i%100===11)||!(t===0)))return"one";return"other"
-}).count = 2;
+}, ["one","other"]);
 
-(e.ksh = function ksh(n) {
+augment(e.ksh = function ksh(n) {
 if(typeof n==="string")n=parseInt(n,10);if(n===0)return"zero";if(n===1)return"one";return"other"
-}).count = 3;
+}, ["zero","one","other"]);
 
-(e.kw =
+augment(e.kw =
  e.naq =
  e.se = function kw(n) {
 if(typeof n==="string")n=parseInt(n,10);if(n===1)return"one";if(n===2)return"two";return"other"
-}).count = 3;
+}, ["one","two","other"]);
 
-(e.lag = function lag(n) {
+augment(e.lag = function lag(n) {
 var i=Math.floor(Math.abs(n));if(typeof n==="string")n=parseInt(n,10);if(n===0)return"zero";if((i===0||i===1)&&!(n===0))return"one";return"other"
-}).count = 3;
+}, ["zero","one","other"]);
 
-(e.lt = function lt(n) {
+augment(e.lt = function lt(n) {
 var f=parseInt(n.toString().replace(/^[^.]*\.?/,""),10);if(typeof n==="string")n=parseInt(n,10);if(n%10===1&&!(n%100>=11&&n%100<=19))return"one";if(n%10===Math.floor(n%10)&&n%10>=2&&n%10<=9&&!(n%100>=11&&n%100<=19))return"few";if(!(f===0))return"many";return"other"
-}).count = 4;
+}, ["one","few","many","other"]);
 
-(e.lv = function lv(n) {
+augment(e.lv = function lv(n) {
 var v=n.toString().replace(/^[^.]*\.?/,"").length,f=parseInt(n.toString().replace(/^[^.]*\.?/,""),10);if(typeof n==="string")n=parseInt(n,10);if(n%10===0||n%100===Math.floor(n%100)&&n%100>=11&&n%100<=19||v===2&&f%100===Math.floor(f%100)&&f%100>=11&&f%100<=19)return"zero";if(n%10===1&&(!(n%100===11)||v===2&&f%10===1&&(!(f%100===11)||!(v===2)&&f%10===1)))return"one";return"other"
-}).count = 3;
+}, ["zero","one","other"]);
 
-(e.mk = function mk(n) {
+augment(e.mk = function mk(n) {
 var i=Math.floor(Math.abs(n)),v=n.toString().replace(/^[^.]*\.?/,"").length,f=parseInt(n.toString().replace(/^[^.]*\.?/,""),10);if(typeof n==="string")n=parseInt(n,10);if(v===0&&(i%10===1||f%10===1))return"one";return"other"
-}).count = 2;
+}, ["one","other"]);
 
-(e.mt = function mt(n) {
+augment(e.mt = function mt(n) {
 if(typeof n==="string")n=parseInt(n,10);if(n===1)return"one";if(n===0||n%100===Math.floor(n%100)&&n%100>=2&&n%100<=10)return"few";if(n%100===Math.floor(n%100)&&n%100>=11&&n%100<=19)return"many";return"other"
-}).count = 4;
+}, ["one","few","many","other"]);
 
-(e.pl = function pl(n) {
+augment(e.pl = function pl(n) {
 var i=Math.floor(Math.abs(n)),v=n.toString().replace(/^[^.]*\.?/,"").length;if(typeof n==="string")n=parseInt(n,10);if(i===1&&v===0)return"one";if(v===0&&i%10===Math.floor(i%10)&&i%10>=2&&i%10<=4&&!(i%100>=12&&i%100<=14))return"few";if(v===0&&!(i===1)&&(i%10===Math.floor(i%10)&&i%10>=0&&i%10<=1||v===0&&(i%10===Math.floor(i%10)&&i%10>=5&&i%10<=9||v===0&&i%100===Math.floor(i%100)&&i%100>=12&&i%100<=14)))return"many";return"other"
-}).count = 4;
+}, ["one","few","many","other"]);
 
-(e.pt = function pt(n) {
+augment(e.pt = function pt(n) {
 var i=Math.floor(Math.abs(n)),v=n.toString().replace(/^[^.]*\.?/,"").length,t=parseInt(n.toString().replace(/^[^.]*\.?|0+$/g,""),10);if(typeof n==="string")n=parseInt(n,10);if(i===1&&(v===0||i===0&&t===1))return"one";return"other"
-}).count = 2;
+}, ["one","other"]);
 
-(e.ro = function ro(n) {
+augment(e.ro = function ro(n) {
 var i=Math.floor(Math.abs(n)),v=n.toString().replace(/^[^.]*\.?/,"").length;if(typeof n==="string")n=parseInt(n,10);if(i===1&&v===0)return"one";if(!(v===0)||n===0||!(n===1)&&n%100===Math.floor(n%100)&&n%100>=1&&n%100<=19)return"few";return"other"
-}).count = 3;
+}, ["one","few","other"]);
 
-(e.ru =
+augment(e.ru =
  e.uk = function ru(n) {
 var i=Math.floor(Math.abs(n)),v=n.toString().replace(/^[^.]*\.?/,"").length;if(typeof n==="string")n=parseInt(n,10);if(v===0&&i%10===1&&!(i%100===11))return"one";if(v===0&&i%10===Math.floor(i%10)&&i%10>=2&&i%10<=4&&!(i%100>=12&&i%100<=14))return"few";if(v===0&&(i%10===0||v===0&&(i%10===Math.floor(i%10)&&i%10>=5&&i%10<=9||v===0&&i%100===Math.floor(i%100)&&i%100>=11&&i%100<=14)))return"many";return"other"
-}).count = 4;
+}, ["one","few","many","other"]);
 
-(e.shi = function shi(n) {
+augment(e.shi = function shi(n) {
 var i=Math.floor(Math.abs(n));if(typeof n==="string")n=parseInt(n,10);if(i===0||n===1)return"one";if(n===Math.floor(n)&&n>=2&&n<=10)return"few";return"other"
-}).count = 3;
+}, ["one","few","other"]);
 
-(e.si = function si(n) {
+augment(e.si = function si(n) {
 var i=Math.floor(Math.abs(n)),f=parseInt(n.toString().replace(/^[^.]*\.?/,""),10);if(typeof n==="string")n=parseInt(n,10);if(n===0||n===1||i===0&&f===1)return"one";return"other"
-}).count = 2;
+}, ["one","other"]);
 
-(e.sl = function sl(n) {
+augment(e.sl = function sl(n) {
 var i=Math.floor(Math.abs(n)),v=n.toString().replace(/^[^.]*\.?/,"").length;if(typeof n==="string")n=parseInt(n,10);if(v===0&&i%100===1)return"one";if(v===0&&i%100===2)return"two";if(v===0&&(i%100===Math.floor(i%100)&&i%100>=3&&i%100<=4||!(v===0)))return"few";return"other"
-}).count = 4;
+}, ["one","two","few","other"]);
 
-(e.tzm = function tzm(n) {
+augment(e.tzm = function tzm(n) {
 if(typeof n==="string")n=parseInt(n,10);if(n===Math.floor(n)&&n>=0&&n<=1||n===Math.floor(n)&&n>=11&&n<=99)return"one";return"other"
-}).count = 2;
+}, ["one","other"]);
